@@ -3,7 +3,7 @@
 
 int main(){
   double A, B, C, D, K, p, x, Y;
-  std::cout << "Ввести x, p, K, C, D: ";
+  std::cout << "Введите x, p, K, C, D: ";
   std::cin >> x >> p >> K >> C >> D;
   A = x + sin(p);
   B = exp(K);
