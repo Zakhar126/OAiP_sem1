@@ -5,8 +5,8 @@ int main(){
   std::cout << "Введите x, p, h, K, C, D: ";
   std::cin >> x >> p >> h >> K >> C >> D;
   A = x - p;
-  B = std::log(h);
-  Y = 0.78 * B + std::pow(A, 3)/(K*C*D);
+  B = log(h);
+  Y = 0.78 * B + pow(A, 3)/(K*C*D);
   std::cout << "Y = " << Y << std::endl;
   return 0;
 }
