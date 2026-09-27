@@ -2,7 +2,7 @@
 #include <cmath>
 int main(){
   double A, D, x, b, S;
- std::cout << "Ввести D, x: ";
+ std::cout << "Введите D, x: ";
  std::cin >> D >> x;
   b = x + D;
   A = D*x/b;
