@@ -6,7 +6,7 @@ int main() {
     std::cout << "Введите a, b, c:";
     std::cin >> a >> b >> c;
     if (a == 0) {
-        std::cout << " a не равен 0.";
+        std::cout << " a не должен быть равен 0.";
         return 0;
     }
 
@@ -26,7 +26,7 @@ int main() {
     double D_x1 = t1 * t1 - 4;
     if (D_x1 > 0) {
         std::cout << " x1 = " << (t1 + sqrt(D_x1)) / 2;
-        std::cout << " x2 = " << (t1 - sqrt(D_x1)) / 2;
+     std::cout << " x2 = " << (t1 - sqrt(D_x1)) / 2;
         hasRoots = true;
     } else if (D_x1 == 0) {
         std::cout << " x1 = " << t1 / 2 ;
