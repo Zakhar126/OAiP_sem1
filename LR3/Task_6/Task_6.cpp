@@ -12,16 +12,22 @@ int main() {
         cout << "\nВведите значение x: ";
         
         if (!(cin >> x)) {
-            cout << "Ошибка ввода\n";
+            cout << "Ошибка ввода. Пожалуйста, введите число.\n";
             cin.clear();
             cin.ignore(1000, '\n');
             continue; 
         }
 
         if (x == 0) {
-            cout << "Ошибка: при x = 0 функция ln|x| не определена \n";
+            cout << "Ошибка: при x = 0 функция ln|x| не определена (логарифм нуля).\n";
         } else {
-            
+            double a = sin(x);
+            double b = cos(x);
+            double c = log(abs(x));
+
+            cout << "a = sin(x) = " << a << endl;
+            cout << "b = cos(x) = " << b << endl;
+            cout << "c = ln|x|  = " << c << endl;
         }
 
         char user_choice;
