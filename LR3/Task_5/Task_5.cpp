@@ -4,11 +4,25 @@
 using namespace std;
 
 int main() {
-    while (true) {
-        
+
     cout << "Программа приближенно находит корень уравнения f(x) = 0 методом перебора\n";
     cout << "Вариант 11: f(x) = sin(lg(x)) + x * cot(x^2) на [0.5; 1.5]\n";
     cout << "Выполнил студент Садовский Захар, группа 653503\n\n";
+    while (true) {
+        double a = 0.5;
+        double b = 1.5;
+        int n;
+
+        while (true) {
+            cout << "Введите количество частей, на которое разделить отрезок (n > 0): ";
+            if (cin >> n && n > 0) {
+                break;
+            }
+            cout << "Ошибка ввода \n";
+            cin.clear();
+            cin.ignore(1000, '\n');
+    }
+    
 
         char user_choice;
         while (true) {
