@@ -28,6 +28,17 @@ int main() {
             cout << "a = sin(x) = " << a << endl;
             cout << "b = cos(x) = " << b << endl;
             cout << "c = ln|x|  = " << c << endl;
+
+            double min_value = a;
+
+            if (b < min_value) {
+                min_value = b;
+            }
+            if (c < min_value) {
+                min_value = c;
+            }
+
+            cout << "Минимальное значение: " << min_value << endl;
         }
 
         char user_choice;
