@@ -8,50 +8,48 @@ int main() {
 
     while (true) {
         int n;
-        cout << "\nВведите количество элементов n: ";
-        while (!(cin >> n) || n <= 0) {
-            cout << "Ошибка ввода! Введите положительное целое число: ";
-            cin.clear();
-            cin.ignore(1000, '\n');
+
+        while (true) {
+            cout << "Введите количество элементов n: ";
+            cin >> n;
+
+            if (n > 0) {
+                break;
+            }
+
+            cout << "Ошибка ввода! Введите положительное целое число \n";
         }
 
-        long long sum = 0;
-        long long current_coefficient = 1;
+        long sum = 0;
+        long c = 1;
 
         cout << "Введите " << n << " целых элементов последовательности через пробел:\n";
         for (int i = 0; i < n; i++) {
-            long long a;
-            while (!(cin >> a)) {
-                cout << "Ошибка ввода! Введите целое число для элемента a[" << i << "]: ";
-                cin.clear();
-                cin.ignore(1000, '\n');
-            }
+            long a;
+            cin >> a;
             
-            sum += current_coefficient * a;
-            current_coefficient *= -2; 
+            sum += c * a;
+            c *= -2;
         }
 
         cout << "Результат вычисления выражения: " << sum << endl;
 
-        char user_choice;
+        char repeat;
         while (true) {
-            cout << "Если хотите завершить программу нажмите 1, если нет: 2 : ";
-            cin >> user_choice;
-            if (user_choice == '1' || user_choice == '2') {
+            cout << "Если хотите завершить программу нажмите 1, если нет 2: ";
+            cin >> repeat;
+
+            if (repeat == '1' || repeat == '2') {
                 break;
             }
+
             cout << "Ошибка ввода \n";
-            cin.clear();
-            cin.ignore(1000, '\n');
         }
 
-        if (user_choice == '1') {
+        if (repeat == '1') {
             cout << "Программа завершена" << endl;
             break;
         }
-        
-        cin.clear();
-        cin.ignore(1000, '\n');
     }
 
     return 0;
