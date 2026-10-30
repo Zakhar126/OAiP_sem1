@@ -8,38 +8,32 @@ int main() {
     cout << "Выполнил студент Садовский Захар, группа 653503 \n";
 
     while (true) {
-        long long limit;
-        cout << "\nВведите верхнюю границу (целое число): ";
-    
-        if (!(cin >> limit)) {
-            cout << "Ошибка ввода! Ожидается целое число.\n";
-            cin.clear();
-            cin.ignore(1000, '\n');
-            continue;
-        }
+        long l;
+        cout << "Введите целое число: ";
+        cin >> l;
 
-        if (limit <= 1) {
-            cout << "Чисел Армстронга меньше " << limit << " не обнаружено.\n";
+        if (l <= 1) {
+            cout << "Чисел Армстронга меньше " << l << " не обнаружено.\n";
         } else {
-            cout << "Числа Армстронга меньше " << limit << ":\n";
+            cout << "Числа Армстронга меньше " << l << ":\n";
             bool found = false;
 
-            for (long long i = 1; i < limit; ++i) {
-                long long temp = i;
-                int num_digits = 0;
+            for (long i = 1; i < l; ++i) {
+                long t = i;
+                int nd = 0;
 
-                while (temp > 0) {
-                    num_digits++;
-                    temp /= 10;
+                while (t > 0) {
+                    nd++;
+                    t /= 10;
                 }
 
-                temp = i;
+                t = i;
                 long long sum = 0;
 
-                while (temp > 0) {
-                    int digit = temp % 10;
-                    sum += round(pow(digit, num_digits));
-                    temp /= 10;
+                while (t > 0) {
+                    int d = t % 10;
+                    sum += round(pow(d, nd));
+                    t /= 10;
                 }
 
                 if (sum == i) {
@@ -47,32 +41,29 @@ int main() {
                     found = true;
                 }
             }
-            
+
             if (!found) {
                 cout << "Нет подходящих чисел.";
             }
             cout << endl;
         }
 
-        char user_choice;
+        char repeat;
         while (true) {
-            cout << "Если хотите завершить программу нажмите 1, если нет: 2 : ";
-            cin >> user_choice;
-            if (user_choice == '1' || user_choice == '2') {
+            cout << "Если хотите завершить программу нажмите 1, если нет 2: ";
+            cin >> repeat;
+
+            if (repeat == '1' || repeat == '2') {
                 break;
             }
+
             cout << "Ошибка ввода \n";
-            cin.clear();
-            cin.ignore(1000, '\n');
         }
 
-        if (user_choice == '1') {
+        if (repeat == '1') {
             cout << "Программа завершена" << endl;
             break;
         }
-
-        cin.clear();
-        cin.ignore(1000, '\n');
     }
 
     return 0;

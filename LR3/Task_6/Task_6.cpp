@@ -25,30 +25,30 @@ int main() {
         cout << "b = cos(x) = " << b << endl;
         cout << "c = ln|x| = " << c << endl;
 
-        double min_value = a;
+        double min_v = a;
 
-        if (b < min_value) {
-            min_value = b;
+        if (b < min_v) {
+            min_v = b;
         }
-        if (c < min_value) {
-            min_value = c;
+        if (c < min_v) {
+            min_v = c;
         }
 
-        cout << "Минимальное значение: " << min_value << endl;
+        cout << "Минимальное значение: " << min_v << endl;
 
-        char user_choice;
+        char repeat;
         while (true) {
             cout << "Если хотите завершить программу нажмите 1, если нет 2: ";
-            cin >> user_choice;
+            cin >> repeat;
 
-            if (user_choice == '1' || user_choice == '2') {
+            if (repeat == '1' || repeat == '2') {
                 break;
             }
 
             cout << "Ошибка ввода \n";
         }
 
-        if (user_choice == '1') {
+        if (repeat == '1') {
             cout << "Программа завершена" << endl;
             break;
         }
