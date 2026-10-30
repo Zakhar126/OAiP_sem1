@@ -16,7 +16,7 @@ int main() {
         }
 
         long long sum = 0;
-        long long current_coefficient = 1; // 2^0 * (-1)^0 = 1
+        long long current_coefficient = 1;
 
         cout << "Введите " << n << " целых элементов последовательности через пробел:\n";
         for (int i = 0; i < n; i++) {
