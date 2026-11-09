@@ -11,15 +11,15 @@ int main() {
         cout << "отличающихся от среднего значения не более чем на 3.\n";
         cout << "Выполнил студент Садовский Захар, группа 653503\n";
 
-        const int MAX_SIZE = 100;
-        double arr[MAX_SIZE];
+        const int S = 100;
+        double arr[S];
         int k;
 
         while (true) {
-            cout << "Введите количество элементов массива k (от 1 до " << MAX_SIZE << "): ";
+            cout << "Введите количество элементов массива k (от 1 до " << S << "): ";
             cin >> k;
 
-            if (k > 0 && k <= MAX_SIZE) {
+            if (k > 0 && k <= S) {
                 break;
             }
             cout << "Ошибка ввода \n";
@@ -41,17 +41,17 @@ int main() {
         for (int i = 0; i < k; i++) {
             sum += arr[i];
         }
-        double average = sum / k;
-        cout << "Среднее значение всех элементов: " << average << "\n";
+        double a = sum / k;
+        cout << "Среднее значение всех элементов: " << a << "\n";
 
-        int count = 0;
+        int c = 0;
         for (int i = 0; i < k; i++) {
-            if (fabs(arr[i] - average) <= 3.0) {
-                count++;
+            if (fabs(arr[i] - a) <= 3.0) {
+                c++;
             }
         }
 
-        cout << "Количество подходящих элементов: " << count << "\n";
+        cout << "Количество подходящих элементов: " << c << "\n";
         cout << "---------------------------------------------------------\n";
 
         while (true) {
