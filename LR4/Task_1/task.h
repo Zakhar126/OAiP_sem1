@@ -1,6 +1,5 @@
 #include <cmath>
 
-// Функция принимает обычный массив и его реальный размер k
 int countElementsNearAverage(double arr[], int k) {
     if (k <= 0) return 0;
 
@@ -9,9 +8,9 @@ int countElementsNearAverage(double arr[], int k) {
         sum += arr[i];
     }
     
-    double a = sum / k; // Среднее значение
+    double a = sum / k;
     
-    int c = 0; // Количество подходящих элементов
+    int c = 0;
     for (int i = 0; i < k; i++) {
         if (std::fabs(arr[i] - a) <= 3.0) {
             c++;
